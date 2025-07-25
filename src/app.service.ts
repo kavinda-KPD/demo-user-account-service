@@ -16,4 +16,12 @@ export class AppService {
       }, 1000); // 1 second delay
     });
   }
+
+  createUserAccount(data: any): Promise<any> {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve({ ...data, id: 1 });
+      }, 1000);
+    });
+  }
 }
